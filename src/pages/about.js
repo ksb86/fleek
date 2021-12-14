@@ -1,18 +1,20 @@
 import Nav from '../components/nav';
+import Footer from '../components/footer';
 
-export default function About(props) {
+export default function About({env}) {
     return (
         <div>
             <Nav/>
-            <h1> About ({props.var})</h1>
+            <h1> About </h1>
+            <Footer env={env}/>
         </div>
     );
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
     return {
         props: {
-            var: process.env.SERVER_VARIABLE,
+            env: process.env.ENVIRONMENT,
         },
     };
 }
