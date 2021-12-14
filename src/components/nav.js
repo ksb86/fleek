@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Nav() {
     return (
-        <nav>
+        <nav style={{background: '#fafafa'}}>
             <Link href="/">
                 <a> Home </a>
             </Link>
